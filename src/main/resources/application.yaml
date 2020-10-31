@@ -1,0 +1,14 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    url: jdbc:postgresql://${DATABASE-HOST:localhost}:${DATABASE-PORT:3306}/database
+    username: root
+    password: my-secret-pw
+  jpa:
+    properties:
+      hibernate:
+        ddl-auto: update
+  flyway:
+    locations: classpath:migrations
+
