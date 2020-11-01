@@ -18,7 +18,7 @@ API in Spring Boot with deploy in GCP App Engine
 - change `resources/application.yaml` to use the connection string for your PostgreSQL database or set the envs variables;
 - run in your IDE or build the jar and run it.
 
-###Trivias and Q&A
+### Trivias and Q&A
 
 - yes, my local database password is `user`, it's complicated to explain...
 - the answer for this question is 42, certainly!
