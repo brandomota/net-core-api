@@ -1,14 +1,14 @@
 server:
-  port: 8081
+  port: ${SERVER-PORT:8081}
 spring:
   datasource:
-    url: jdbc:postgresql://${DATABASE-HOST:localhost}:${DATABASE-PORT:3306}/database
-    username: root
-    password: my-secret-pw
+    url: jdbc:postgresql://${DATABASE-HOST:localhost}:${DATABASE-PORT:5432}/${DATABASE-NAME:database}
+    username: ${DATABASE-USER:postgres}
+    password: ${DATABASE-PASSWORD:user}
   jpa:
     properties:
       hibernate:
-        ddl-auto: update
+        ddl-auto: validate
   flyway:
     locations: classpath:migrations
 
